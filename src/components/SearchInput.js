@@ -4,8 +4,8 @@ import { api } from "../api";
 import { Input } from "./Input";
 import { Card } from "./Card";
 import { Button } from "./Button";
+import { FontSideBar } from "./LayoutTheme";
 import FavoriteContext from "../store/favorites-context";
-import font from "./Fonts.module.css";
 
 const countOfJokes = 25;
 const minInputLength = 3;
@@ -51,7 +51,7 @@ export function SearchInput() {
   }
   return (
     <div className="p-5">
-      <h3 className={font.fontSideBar}>Let's find a joke</h3>
+      <FontSideBar>Let's find a joke</FontSideBar>
 
       <Input
         onChange={(e) => {
@@ -85,3 +85,5 @@ export function SearchInput() {
     </div>
   );
 }
+
+// className={font.fontSideBar}

@@ -3,9 +3,9 @@ import { useState, useContext } from "react";
 import { Spinner, CardText } from "reactstrap";
 import { Card } from "./Card";
 import { Button } from "./Button";
-import style from "./Fonts.module.css";
 import { CategorySeveralForm } from "./CategorySeveralForm";
 import FavoriteContext from "../store/favorites-context";
+import { FontLabel } from "./LayoutTheme";
 
 export function CategorySeveralJokes({
   onChangeValue,
@@ -46,7 +46,7 @@ export function CategorySeveralJokes({
 
   return (
     <div className="d-flex flex-column align-items-center">
-      <p className={style.font}>1. Select the category</p>
+      <FontLabel>1. Select the category</FontLabel>
       <CategorySeveralForm
         formSubmit={formSubmit}
         onChangeValue={onChangeValue}
