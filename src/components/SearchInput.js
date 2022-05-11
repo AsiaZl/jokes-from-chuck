@@ -1,4 +1,4 @@
-import { useState, useEffect, useContext } from "react";
+import { useState, useEffect, useContext, useRef } from "react";
 import { Spinner, CardText } from "reactstrap";
 import { api } from "../api";
 import { Input } from "./Input";
@@ -15,6 +15,7 @@ export function SearchInput() {
   const [result, setResult] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
+  const inputRef = useRef(null);
 
   const favoritesCtx = useContext(FavoriteContext);
 
@@ -49,6 +50,11 @@ export function SearchInput() {
   function deleteFromFav(id) {
     favoritesCtx.removeFavorite(id);
   }
+
+  useEffect(() => {
+    inputRef.current.focus();
+  }, []);
+
   return (
     <div className="p-5">
       <FontSideBar>Let's find a joke</FontSideBar>
@@ -59,6 +65,7 @@ export function SearchInput() {
         }}
         value={query}
         placeholder={"Type at least 3 characters"}
+        innerRef={inputRef}
       />
 
       {isLoading ? (
@@ -68,7 +75,7 @@ export function SearchInput() {
           <Card>
             <CardText key={joke.id}>{joke.value}</CardText>
             <Button
-              handleClick={
+              onClick={
                 favoritesCtx.itemIsFavorite(joke.id)
                   ? () => deleteFromFav(joke.id)
                   : () => addToFavorite(joke)

@@ -1,25 +1,31 @@
 import styled from "@emotion/styled";
 import { Link as ReactLink, NavLink as ReactNavLink } from "react-router-dom";
 
+// import { cardThemeDark, cardThemeLight } from "./Card";
+
 export const lightTheme = {
   backgroundColorSideBar: "#ffe1a8",
   backgroundColorMainPage: "#fffcf2",
-  backgroundCard: "white",
+  // backgroundCard: "white",
   color: "#0d6efd",
   inputColor: "#0d6efd",
+  // sideBar: {
+  //   backgroundColor: "",
+  //   color: "",
+  // },
+  // card: cardThemeLight,
 };
 export const darkTheme = {
   backgroundColorSideBar: "#01161e",
   backgroundColorMainPage: "#124559",
-  color: "white",
   backgroundCard: "transparent",
+  color: "white",
   inputColor: "black",
 };
 export const StyledLayout = styled.div`
   min-height: 100vh;
   display: flex;
   flex-direction: row;
-
   @media (max-width: 600px) {
     flex-direction: column;
   }
@@ -84,8 +90,14 @@ export const FontLabel = styled.label`
 `;
 export const Link = styled(ReactLink)`
   color: ${(props) => props.theme.color};
+  &:hover {
+    color: ${(props) => props.theme.color};
+  }
 `;
 
 export const NavLink = styled(ReactNavLink)`
   color: ${(props) => props.theme.color};
+  &:hover {
+    color: ${(props) => props.theme.color};
+  }
 `;
