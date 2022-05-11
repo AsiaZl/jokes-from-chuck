@@ -3,7 +3,7 @@ import { Spinner } from "reactstrap";
 import { api } from "../api";
 import { CategorySeveralJokes } from "../components/CategorySeveralJokes";
 import { Layout } from "../components/maincomponents/Layout";
-import font from "../components/Fonts.module.css";
+import { FontHeader } from "../components/LayoutTheme";
 
 export function Categories() {
   const [categories, setCategories] = useState([]);
@@ -47,9 +47,9 @@ export function Categories() {
   return (
     <Layout>
       <div style={{ width: "70%" }}>
-        <h3 className={font.fontHeader}>
+        <FontHeader>
           It's a place where you can find jokes by the category
-        </h3>
+        </FontHeader>
         <CategorySeveralJokes
           onChangeValue={selectedValue}
           selectedCategory={category}

@@ -3,14 +3,19 @@ import ReactDOM from "react-dom";
 import "bootstrap/dist/css/bootstrap.css";
 import App from "./App";
 import { FavoritesContextProvider } from "./store/favorites-context";
+import { ThemeProvider } from "./store/darkmode-context";
+
 import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
   <FavoritesContextProvider>
     <React.StrictMode>
-      <App />
+      <ThemeProvider>
+        <App />
+      </ThemeProvider>
     </React.StrictMode>
   </FavoritesContextProvider>,
+
   document.getElementById("root")
 );
 

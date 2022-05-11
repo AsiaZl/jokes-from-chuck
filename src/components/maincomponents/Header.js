@@ -1,11 +1,10 @@
-import { Navbar, NavItem, Nav } from "reactstrap";
-import { NavLink, Link } from "react-router-dom";
-import font from "../Fonts.module.css";
+import { Navbar, Nav, NavItem } from "reactstrap";
+import { Link, NavLink } from "../LayoutTheme";
 
 export function Header() {
   return (
     <div>
-      <Navbar expand="xs" className={font.fontNav}>
+      <Navbar expand="xs" s>
         <Link to="/" className="navbar-brand">
           Jokes
         </Link>

@@ -3,7 +3,7 @@ import { useContext } from "react";
 import { Card } from "../components/Card";
 import { Button } from "../components/Button";
 import { CardText } from "reactstrap";
-import font from "./../components/Fonts.module.css";
+
 import FavoriteContext from "../store/favorites-context";
 
 export function Favorites() {
@@ -17,7 +17,7 @@ export function Favorites() {
     <div>
       <Layout>
         {favoritesCtx.favorites.length === 0 ? (
-          <p className={font.fontNav}>There is no favorite jokes yet</p>
+          <p>There is no favorite jokes yet</p>
         ) : (
           favoritesCtx.favorites.map((joke) => {
             return (
