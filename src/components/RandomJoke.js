@@ -1,7 +1,9 @@
 import { useEffect, useState, useContext } from "react";
-import { Row, Card, CardTitle, CardText, Spinner } from "reactstrap";
+import { Row, CardTitle, CardText, Spinner } from "reactstrap";
+import { MainCard } from "./Card";
 import { api } from "../api";
 import { Button } from "./Button";
+
 import { SeveralRandomJokes } from "./SeveralRandomJokes";
 import FavoriteContext from "../store/favorites-context";
 
@@ -59,15 +61,7 @@ export function RandomJoke() {
         {isLoading ? (
           <Spinner />
         ) : (
-          <Card
-            body
-            className="text-center"
-            style={{
-              backgroundColor: "transparent",
-              border: "none",
-              color: "#0d6efd",
-            }}
-          >
+          <MainCard body className="text-center">
             <CardTitle tag="h5">Joke from Chuck</CardTitle>
             <CardText> {randomJoke.value}</CardText>
             <Button
@@ -84,7 +78,7 @@ export function RandomJoke() {
                 : "Add to favorites"}
             </Button>
             <Button onClick={getRandomJoke}>Get Another Joke</Button>
-          </Card>
+          </MainCard>
         )}
       </Row>
       <Row>

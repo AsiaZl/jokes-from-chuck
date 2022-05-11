@@ -1,15 +1,15 @@
 import { Col } from "reactstrap";
 import { Input } from "./Input";
 import { Button } from "./Button";
-import font from "./Fonts.module.css";
+import { FontLabel } from "./LayoutTheme";
 
 export function SeveralRandomJokesForm({ onSubmitChoise }) {
   return (
     <form onSubmit={onSubmitChoise}>
       <div>
-        <label htmlFor="numberOfJokesInput" className={font.font}>
+        <FontLabel htmlFor="numberOfJokesInput">
           Determine the number of jokes
-        </label>
+        </FontLabel>
         <Col lg={2}>
           <Input id="numberOfJokesInput" type="number" min="1" max="120" />
           <div style={{ margin: "1rem 0 1rem 0" }}>
