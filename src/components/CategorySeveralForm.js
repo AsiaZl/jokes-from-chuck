@@ -1,6 +1,6 @@
-import { Button } from "./Button";
-import { Input, Option } from "./Input";
-import { FontLabel } from "./LayoutTheme";
+import { Button } from "././styling/Button";
+import { Input, Option } from "././styling/Input";
+import { FontLabel } from "././styling/LayoutTheme";
 
 const id = "numberOfJoke";
 

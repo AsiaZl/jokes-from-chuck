@@ -1,8 +1,8 @@
 import { useEffect, useState, useContext } from "react";
 import { Row, CardTitle, CardText, Spinner } from "reactstrap";
-import { MainCard } from "./Card";
+import { MainCard } from "././styling/Card";
 import { api } from "../api";
-import { Button } from "./Button";
+import { Button } from "././styling/Button";
 
 import { SeveralRandomJokes } from "./SeveralRandomJokes";
 import FavoriteContext from "../store/favorites-context";

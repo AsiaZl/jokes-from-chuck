@@ -5,12 +5,11 @@ import { SearchInput } from "../SearchInput";
 import chuck from "../images/norris-cartoon-pics-transparent.png";
 import { useContext } from "react";
 import { ThemeContext } from "../../store/darkmode-context";
-
-import { StyledLayout } from "../LayoutTheme";
-import { LayoutSideBar } from "../LayoutTheme";
-import { LayoutMainPage } from "../LayoutTheme";
-import { LayoutMainContent } from "../LayoutTheme";
-import { lightTheme, darkTheme } from "../LayoutTheme";
+import { StyledLayout } from "../styling/LayoutTheme";
+import { LayoutSideBar } from "../styling/LayoutTheme";
+import { LayoutMainPage } from "../styling/LayoutTheme";
+import { LayoutMainContent } from "../styling/LayoutTheme";
+import { lightTheme, darkTheme } from "../styling/LayoutTheme";
 
 export function Layout({ children }) {
   const [{ isDark }, toggleTheme] = useContext(ThemeContext);

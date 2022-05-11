@@ -1,10 +1,10 @@
 import { Navbar, Nav, NavItem } from "reactstrap";
-import { Link, NavLink } from "../LayoutTheme";
+import { Link, NavLink } from "../styling/LayoutTheme";
 
 export function Header() {
   return (
     <div>
-      <Navbar expand="xs" s>
+      <Navbar expand="xs">
         <Link to="/" className="navbar-brand">
           Jokes
         </Link>

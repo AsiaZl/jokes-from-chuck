@@ -1,10 +1,10 @@
 import { useState, useEffect, useContext } from "react";
 import { Spinner, CardText } from "reactstrap";
 import { api } from "../api";
-import { Input } from "./Input";
-import { Card } from "./Card";
-import { Button } from "./Button";
-import { FontSideBar } from "./LayoutTheme";
+import { Input } from "././styling/Input";
+import { Card } from "././styling/Card";
+import { Button } from "././styling/Button";
+import { FontSideBar } from "././styling/LayoutTheme";
 import FavoriteContext from "../store/favorites-context";
 
 const countOfJokes = 25;
@@ -65,8 +65,8 @@ export function SearchInput() {
         <Spinner />
       ) : (
         result.slice(0, countOfJokes).map((joke) => (
-          <Card>
-            <CardText key={joke.id}>{joke.value}</CardText>
+          <Card key={joke.id}>
+            <CardText>{joke.value}</CardText>
             <Button
               handleClick={
                 favoritesCtx.itemIsFavorite(joke.id)

@@ -1,11 +1,11 @@
 import { api } from "../api";
 import { useState, useContext } from "react";
 import { Spinner, CardText } from "reactstrap";
-import { Card } from "./Card";
-import { Button } from "./Button";
+import { Card } from "././styling/Card";
+import { Button } from "././styling/Button";
 import { CategorySeveralForm } from "./CategorySeveralForm";
 import FavoriteContext from "../store/favorites-context";
-import { FontLabel } from "./LayoutTheme";
+import { FontLabel } from "././styling/LayoutTheme";
 
 export function CategorySeveralJokes({
   onChangeValue,
@@ -60,7 +60,7 @@ export function CategorySeveralJokes({
           <Card key={joke.id}>
             <CardText>{joke.value}</CardText>
             <Button
-              handleClick={
+              onClick={
                 favoritesCtx.itemIsFavorite(joke.id)
                   ? () => deleteFromFav(joke.id)
                   : () => addToFavorite(joke)

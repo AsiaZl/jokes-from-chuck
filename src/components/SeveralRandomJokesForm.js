@@ -1,7 +1,7 @@
 import { Col } from "reactstrap";
-import { Input } from "./Input";
-import { Button } from "./Button";
-import { FontLabel } from "./LayoutTheme";
+import { Input } from "././styling/Input";
+import { Button } from "././styling/Button";
+import { FontLabel } from "././styling/LayoutTheme";
 
 export function SeveralRandomJokesForm({ onSubmitChoise }) {
   return (
