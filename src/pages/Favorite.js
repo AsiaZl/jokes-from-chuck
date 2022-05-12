@@ -1,7 +1,7 @@
 import { Layout } from "../components/maincomponents/Layout";
 import { useContext } from "react";
-import { Card } from "../components/Card";
-import { Button } from "../components/Button";
+import { Card } from "../components/styling/Card";
+import { Button } from "../components/styling/Button";
 import { CardText } from "reactstrap";
 
 import FavoriteContext from "../store/favorites-context";

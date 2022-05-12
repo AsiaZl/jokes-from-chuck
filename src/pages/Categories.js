@@ -3,7 +3,7 @@ import { Spinner } from "reactstrap";
 import { api } from "../api";
 import { CategorySeveralJokes } from "../components/CategorySeveralJokes";
 import { Layout } from "../components/maincomponents/Layout";
-import { FontHeader } from "../components/LayoutTheme";
+import { FontHeader } from "../components/styling/LayoutTheme";
 
 export function Categories() {
   const [categories, setCategories] = useState([]);
