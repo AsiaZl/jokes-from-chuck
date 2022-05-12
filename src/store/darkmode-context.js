@@ -1,8 +1,7 @@
 import { createContext, useState, useEffect, useRef } from "react";
 
-export const ThemeContext = createContext();
-
 const initialMode = JSON.parse(localStorage.getItem("darkmode")) || false;
+export const ThemeContext = createContext();
 export function ThemeProvider({ children }) {
   const [isDark, setIsDark] = useState(initialMode);
   const isInitialState = useRef(true);
