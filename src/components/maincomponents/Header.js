@@ -22,7 +22,7 @@ export function Header() {
               Favorite
             </NavLink>
           </NavItem>
-          <NavItem style={{ color: "white" }}>
+          <NavItem style={{ color: "yellow" }}>
             ({favoritesCtx.favorites.length})
           </NavItem>
         </Nav>
