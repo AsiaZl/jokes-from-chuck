@@ -3,7 +3,6 @@ import { Row, CardTitle, CardText, Spinner } from "reactstrap";
 import { MainCard } from "./Card";
 import { api } from "../api";
 import { Button } from "./Button";
-
 import { SeveralRandomJokes } from "./SeveralRandomJokes";
 import FavoriteContext from "../store/favorites-context";
 
@@ -71,7 +70,6 @@ export function RandomJoke() {
                   ? () => deleteFromFav(randomJoke.id)
                   : () => addToFavorite(randomJoke)
               }
-              id="btn"
             >
               {favoritesCtx.itemIsFavorite(randomJoke.id)
                 ? "Remove from the favorites"
