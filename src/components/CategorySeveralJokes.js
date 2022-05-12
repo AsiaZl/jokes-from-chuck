@@ -1,11 +1,11 @@
 import { api } from "../api";
 import { useState, useContext } from "react";
 import { Spinner, CardText } from "reactstrap";
-import { Card } from "././styling/Card";
-import { Button } from "././styling/Button";
+import { Card } from "./styling/Card";
+import { Button } from "./styling/Button";
 import { CategorySeveralForm } from "./CategorySeveralForm";
 import FavoriteContext from "../store/favorites-context";
-import { FontLabel } from "././styling/LayoutTheme";
+import { FontLabel } from "./styling/LayoutTheme";
 
 export function CategorySeveralJokes({
   onChangeValue,

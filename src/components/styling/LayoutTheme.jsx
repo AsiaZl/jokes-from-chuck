@@ -32,8 +32,8 @@ export const StyledLayout = styled.div`
 export const LayoutSideBar = styled.div`
   background-color: ${(props) => props.theme.backgroundColorSideBar};
   width: 30%;
-  font-size: "20px";
-  color: "#0d6efd";
+  font-size: 20px;
+  color: #0d6efd;
   @media (max-width: 768px) {
     width: 40%;
   }

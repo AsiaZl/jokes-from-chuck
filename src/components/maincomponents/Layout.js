@@ -16,21 +16,19 @@ export function Layout({ children }) {
 
   return (
     <ThemeProvider theme={isDark ? darkTheme : lightTheme}>
-      <div>
-        <StyledLayout>
-          <LayoutSideBar>
-            <SearchInput />
-          </LayoutSideBar>
-          <LayoutMainPage>
-            <Header />
-            <LayoutMainContent>
-              <img src={chuck} alt="chuck" style={{ width: "20%" }} />
-              {children}
-            </LayoutMainContent>
-            <Footer onClick={toggleTheme} isDark={isDark} />
-          </LayoutMainPage>
-        </StyledLayout>
-      </div>
+      <StyledLayout>
+        <LayoutSideBar>
+          <SearchInput />
+        </LayoutSideBar>
+        <LayoutMainPage>
+          <Header />
+          <LayoutMainContent>
+            <img src={chuck} alt="chuck" style={{ width: "20%" }} />
+            {children}
+          </LayoutMainContent>
+          <Footer onClick={toggleTheme} isDark={isDark} />
+        </LayoutMainPage>
+      </StyledLayout>
     </ThemeProvider>
   );
 }

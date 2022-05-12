@@ -1,10 +1,10 @@
 import { useState, useEffect, useContext } from "react";
 import { Spinner, CardText } from "reactstrap";
 import { api } from "../api";
-import { Input } from "././styling/Input";
-import { Card } from "././styling/Card";
-import { Button } from "././styling/Button";
-import { FontSideBar } from "././styling/LayoutTheme";
+import { Input } from "./styling/Input";
+import { Card } from "./styling/Card";
+import { Button } from "./styling/Button";
+import { FontSideBar } from "./styling/LayoutTheme";
 import FavoriteContext from "../store/favorites-context";
 
 const countOfJokes = 25;
@@ -85,5 +85,3 @@ export function SearchInput() {
     </div>
   );
 }
-
-// className={font.fontSideBar}

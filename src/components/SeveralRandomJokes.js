@@ -2,8 +2,8 @@ import { api } from "../api";
 import { useContext, useState } from "react";
 import { CardText, Spinner } from "reactstrap";
 import { SeveralRandomJokesForm } from "./SeveralRandomJokesForm";
-import { Card } from "././styling/Card";
-import { Button } from "././styling/Button";
+import { Card } from "./styling/Card";
+import { Button } from "./styling/Button";
 import FavoriteContext from "../store/favorites-context";
 
 export function SeveralRandomJokes() {

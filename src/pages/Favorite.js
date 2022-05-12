@@ -14,23 +14,21 @@ export function Favorites() {
   }
 
   return (
-    <div>
-      <Layout>
-        {favoritesCtx.favorites.length === 0 ? (
-          <p>There is no favorite jokes yet</p>
-        ) : (
-          favoritesCtx.favorites.map((joke) => {
-            return (
-              <Card key={joke.id}>
-                <CardText>{joke.value}</CardText>
-                <Button onClick={() => DeleteFromFav(joke.id)} id="btn">
-                  Remove from the favorites
-                </Button>
-              </Card>
-            );
-          })
-        )}
-      </Layout>
-    </div>
+    <Layout>
+      {favoritesCtx.favorites.length === 0 ? (
+        <p>There is no favorite jokes yet</p>
+      ) : (
+        favoritesCtx.favorites.map((joke) => {
+          return (
+            <Card key={joke.id}>
+              <CardText>{joke.value}</CardText>
+              <Button onClick={() => DeleteFromFav(joke.id)} id="btn">
+                Remove from the favorites
+              </Button>
+            </Card>
+          );
+        })
+      )}
+    </Layout>
   );
 }
