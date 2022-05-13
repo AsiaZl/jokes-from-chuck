@@ -1,25 +1,13 @@
 import { api } from "../api";
-import { useContext, useState } from "react";
-import { CardText, Spinner } from "reactstrap";
+import { useState } from "react";
+import { Spinner } from "reactstrap";
 import { SeveralRandomJokesForm } from "./SeveralRandomJokesForm";
-import { Card } from "./styling/Card";
-import { Button } from "./styling/Button";
-import FavoriteContext from "../store/favorites-context";
+import { CardComponent } from "./Card";
 
 export function SeveralRandomJokes() {
   const [jokes, setJokes] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
-
-  const favoritesCtx = useContext(FavoriteContext);
-
-  function addToFavorite(joke) {
-    favoritesCtx.addFavorite(joke);
-  }
-
-  function deleteFromFav(id) {
-    favoritesCtx.removeFavorite(id);
-  }
 
   function submitChoise(e) {
     e.preventDefault();
@@ -47,22 +35,7 @@ export function SeveralRandomJokes() {
       {isLoading ? (
         <Spinner />
       ) : (
-        jokes.map((joke) => (
-          <Card key={joke.id}>
-            <CardText>{joke.value}</CardText>
-            <Button
-              onClick={
-                favoritesCtx.itemIsFavorite(joke.id)
-                  ? () => deleteFromFav(joke.id)
-                  : () => addToFavorite(joke)
-              }
-            >
-              {favoritesCtx.itemIsFavorite(joke.id)
-                ? "Remove from the favorites"
-                : "Add to favorites"}
-            </Button>
-          </Card>
-        ))
+        jokes.map((joke) => <CardComponent joke={joke} />)
       )}
     </div>
   );
