@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Navbar, Nav, NavItem } from "reactstrap";
+import { Navbar, Nav, NavItem, NavbarText } from "reactstrap";
 import { Link, NavLink } from "../LayoutTheme";
 import FavoriteContext from "../../store/favorites-context";
 
@@ -22,9 +22,9 @@ export function Header() {
               Favorite
             </NavLink>
           </NavItem>
-          <NavItem style={{ color: "yellow" }}>
+          <NavbarText style={{ color: "yellow" }}>
             ({favoritesCtx.favorites.length})
-          </NavItem>
+          </NavbarText>
         </Nav>
       </Navbar>
     </div>
