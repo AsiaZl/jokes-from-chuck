@@ -14,6 +14,7 @@ export const Card = styled(ReactCard)`
   background-color: ${(props) => props.theme.card.backgroundColor} !important;
   margin: 0.5rem;
   color: ${(props) => props.theme.card.color};
+  font-size: 15px;
   padding: 2rem;
   border-color: ${(props) => props.theme.card.color};
   transition: 0.5s;
