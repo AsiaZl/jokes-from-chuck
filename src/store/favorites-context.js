@@ -42,6 +42,7 @@ export function FavoritesContextProvider(props) {
   const itemIsFavorite = (id) => {
     return state.some((joke) => joke.id === id);
   };
+
   const context = {
     favorites: state,
     addFavorite: addFavorites,

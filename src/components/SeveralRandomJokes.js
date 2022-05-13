@@ -56,6 +56,12 @@ export function SeveralRandomJokes() {
                   ? () => deleteFromFav(joke.id)
                   : () => addToFavorite(joke)
               }
+              style={{
+                backgroundColor: favoritesCtx.itemIsFavorite(joke.id)
+                  ? "red"
+                  : "green",
+                color: "white",
+              }}
             >
               {favoritesCtx.itemIsFavorite(joke.id)
                 ? "Remove from the favorites"
