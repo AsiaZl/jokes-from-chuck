@@ -2,7 +2,7 @@ import { ThemeProvider } from "@emotion/react";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
 import { SearchInput } from "../SearchInput";
-import chuck from "../images/norris-cartoon-pics-transparent.png";
+import chuck from "../../images/norris-cartoon-pics-transparent.png";
 import { useContext } from "react";
 import { ThemeContext } from "../../store/darkmode-context";
 import { StyledLayout } from "../styling/LayoutTheme";
