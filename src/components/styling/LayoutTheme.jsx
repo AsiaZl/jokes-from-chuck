@@ -20,6 +20,7 @@ export const darkTheme = {
   button: buttonThemeDark,
   input: inputThemeDark,
 };
+
 export const StyledLayout = styled.div`
   min-height: 100vh;
   display: flex;
@@ -41,7 +42,6 @@ export const LayoutSideBar = styled.div`
     width: 100%;
   }
 `;
-
 export const LayoutMainPage = styled.div`
   display: flex;
   flex-direction: column;

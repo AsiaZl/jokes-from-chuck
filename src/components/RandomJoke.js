@@ -12,17 +12,11 @@ export function RandomJoke() {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
   const [severalJokes, setSeveralJokes] = useState(false);
-  const [buttonText, setButtonText] = useState("Get more random jokes");
 
   const favoritesCtx = useContext(FavoriteContext);
 
   function addComponent() {
     setSeveralJokes((severalJokes) => !severalJokes);
-    if (severalJokes) {
-      setButtonText("Get more random jokes");
-    } else {
-      setButtonText("Hide jokes");
-    }
   }
 
   function getRandomJoke() {
@@ -84,7 +78,7 @@ export function RandomJoke() {
       <Row>
         <div className="px-3">
           <Button style={{ width: "100%" }} onClick={addComponent}>
-            {buttonText}
+            {severalJokes ? "Hide jokes" : "Get more random jokes"}
           </Button>
         </div>
         <div>{severalJokes ? <SeveralRandomJokes /> : ""}</div>
