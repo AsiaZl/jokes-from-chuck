@@ -22,7 +22,16 @@ export function Favorites() {
           return (
             <Card key={joke.id}>
               <CardText>{joke.value}</CardText>
-              <Button onClick={() => DeleteFromFav(joke.id)} id="btn">
+              <Button
+                onClick={() => DeleteFromFav(joke.id)}
+                id="btn"
+                style={{
+                  backgroundColor: favoritesCtx.itemIsFavorite(joke.id)
+                    ? "red"
+                    : "green",
+                  color: "white",
+                }}
+              >
                 Remove from the favorites
               </Button>
             </Card>

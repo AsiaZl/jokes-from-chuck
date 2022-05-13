@@ -58,7 +58,13 @@ export function RandomJoke() {
             <CardTitle tag="h5">Joke from Chuck</CardTitle>
             <CardText> {randomJoke.value}</CardText>
             <Button
-              style={{ marginBottom: "1rem" }}
+              style={{
+                marginBottom: "1rem",
+                backgroundColor: favoritesCtx.itemIsFavorite(randomJoke.id)
+                  ? "red"
+                  : "green",
+                color: "white",
+              }}
               onClick={
                 favoritesCtx.itemIsFavorite(randomJoke.id)
                   ? () => deleteFromFav(randomJoke.id)
