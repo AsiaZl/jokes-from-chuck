@@ -34,12 +34,10 @@ export function GetCategoryRandomJoke() {
     return <Spinner />;
   }
   return (
-    <div>
-      <CategoryRandomJoke
-        categories={categories}
-        selectedValue={selectedValue}
-        selectedCategory={selectedCategory}
-      />
-    </div>
+    <CategoryRandomJoke
+      categories={categories}
+      selectedValue={selectedValue}
+      selectedCategory={selectedCategory}
+    />
   );
 }
