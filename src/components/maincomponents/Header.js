@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { Navbar, Nav, NavItem } from "reactstrap";
-import { Link, NavLink } from "../LayoutTheme";
+import { Link, NavLink } from "../styling/LayoutTheme";
 import FavoriteContext from "../../store/favorites-context";
 
 export function Header() {
@@ -28,5 +28,6 @@ export function Header() {
         </Nav>
       </Navbar>
     </div>
+
   );
 }

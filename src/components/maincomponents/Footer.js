@@ -1,6 +1,6 @@
 import { Container } from "reactstrap";
-import { Button } from "../Button";
-import { FontFooter } from "../LayoutTheme";
+import { Button } from "../styling/Button";
+import { FontFooter } from "../styling/LayoutTheme";
 
 export function Footer(props) {
   return (
