@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import { Link as ReactLink, NavLink as ReactNavLink } from "react-router-dom";
+import { NavbarText as ReactNavbarText } from "reactstrap";
 import { cardThemeDark, cardThemeLight } from "./Card";
 import { buttonThemeDark, buttonThemeLight } from "./Button";
 import { inputThemeDark, inputThemeLight } from "./Input";
@@ -98,4 +99,8 @@ export const NavLink = styled(ReactNavLink)`
   &:hover {
     color: ${(props) => props.theme.color};
   }
+`;
+
+export const NavbarText = styled(ReactNavbarText)`
+  color: ${(props) => props.theme.color};
 `;
