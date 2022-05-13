@@ -11,20 +11,18 @@ export const cardThemeDark = {
 };
 
 export const Card = styled(ReactCard)`
-  background-color: ${(props) => props.theme.card.backgroundColor} !important;
-  margin: 0.5rem;
+  background-color: ${(props) =>
+    props.card ? "transparent" : props.theme.card.backgroundColor} !important;
+  margin: ${(props) => (props.card ? "0" : "2")};
+  width: ${(props) => (props.card ? "100%" : "80%")};
+  text-align: center;
   color: ${(props) => props.theme.card.color};
-  padding: 2rem;
-  border-color: ${(props) => props.theme.card.color};
+  padding: ${(props) => (props.card ? "0" : "1.5rem")};
+  border-color: ${(props) =>
+    props.card ? "transparent" : props.theme.card.color};
   transition: 0.5s;
-  width: 80%;
+  font-size: 15px;
   &:hover {
     transform: scale(1.05);
   }
-`;
-
-export const MainCard = styled(ReactCard)`
-  background-color: transparent !important;
-  border: none;
-  color: ${(props) => props.theme.card.color};
 `;
