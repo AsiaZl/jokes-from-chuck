@@ -35,7 +35,6 @@ export const LayoutSideBar = styled.div`
     width: 100%;
   }
 `;
-
 export const LayoutMainPage = styled.div`
   display: flex;
   flex-direction: column;
