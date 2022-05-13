@@ -1,19 +1,11 @@
 import styled from "@emotion/styled";
 import { Link as ReactLink, NavLink as ReactNavLink } from "react-router-dom";
 
-// import { cardThemeDark, cardThemeLight } from "./Card";
-
 export const lightTheme = {
   backgroundColorSideBar: "#ffe1a8",
   backgroundColorMainPage: "#fffcf2",
-  // backgroundCard: "white",
   color: "#0d6efd",
   inputColor: "#0d6efd",
-  // sideBar: {
-  //   backgroundColor: "",
-  //   color: "",
-  // },
-  // card: cardThemeLight,
 };
 export const darkTheme = {
   backgroundColorSideBar: "#01161e",
